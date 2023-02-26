@@ -10,12 +10,13 @@ const studentController =require("../controllers/studentController")
 
 router.post('/register',userController.resisterUser)
  router.get('/logIn',userController.logIn)
+ router.get('/student/:userId',auth.authentication, userController.getDataFilter)
 
+ router.put('/student/:userId',auth.authentication,auth.authorization, userController.updateStudent)
+ router.delete('/student/:userId',auth.authentication,auth.authorization, userController.deleteData)
+// student api
  router.post('/student/:userId' , auth.authentication ,studentController.studentData )
-  router.get("/",(req,res)=>{
-
-    res.send({data: "hii there i am Akhilesh Soni"})
-  })
 
 
   module.exports = router
+    

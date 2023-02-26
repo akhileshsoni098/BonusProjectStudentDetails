@@ -5,18 +5,23 @@ const SutudentModel = require("./models/SutudentModel");
 
 const authentication =  (req,res,next)=>{
         const authHeader = req.headers['authorization'];
+
         const token = authHeader && authHeader.split(' ')[1];
         if(!token){
             return res.status(400).send({status: false, message: "Token not present"})
         }
         console.log(token)
-   
+     try{
      const decoded =   jwt.verify(token,'secreateKey')   
      
      req.token = decoded
+console.log(decoded.userId)
 
+     next()
 
-    next()
+    } catch (error) {
+       return res.status(500).send({status: false, message: error.message})
+    }
 }
 
 const authorization = async (req,res,next)=>{

@@ -15,7 +15,7 @@ router.post('/register',userController.resisterUser)
  router.put('/student/:userId',auth.authentication,auth.authorization, userController.updateStudent)
  router.delete('/student/:userId',auth.authentication,auth.authorization, userController.deleteData)
 // student d
- router.post('/student/:userId' , auth.authentication,auth.authorization ,studentController.studentData )
+ router.post('/student/:userId' , auth.authentication,studentController.studentData )
 
 
-  module.exports = router
+  module.exports = router 

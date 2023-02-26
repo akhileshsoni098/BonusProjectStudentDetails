@@ -16,4 +16,4 @@ password:{
 
 }, {timestamp:true})
 
-module.exports = mongoose.model("user",userSchema)
+module.exports = mongoose.model("Nuser",userSchema)

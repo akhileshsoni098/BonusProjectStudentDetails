@@ -20,7 +20,7 @@ marks:{
 
 userId:{
     type: mongoose.Schema.Types.ObjectId,
-   ref:"user"
+   ref:"Nuser"
 },
 
 isDeleted:{

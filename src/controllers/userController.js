@@ -29,7 +29,6 @@ const {userName, password} =req.body
 const checkUser = await userModel.findOne({userName:userName})
 if(!checkUser){return res.status(400).send({status:false, message:"Please Resister yourself"})}
 if(password != checkUser.password){return res.status(400).send({status:false , message:"Incorrect password"})}
-console.log(checkUser._id)
 let token = jwt.sign({userId:checkUser._id}, "secreateKey")
 
 res.setHeader('Authorization', `Bearer ${token}`)

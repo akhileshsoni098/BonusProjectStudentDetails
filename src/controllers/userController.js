@@ -128,7 +128,8 @@ const updateStudent = async (req, res) => {
       );
       return res.status(200).send({ status: false, data: updateMarks });
     }
-    res.status(400).send({ status: false, message: "Invalid entry" });
+    let newData = await studentModel.create(data)
+    res.status(400).send({ status: false, data: newData});
   } catch (err) {
     res.status(500).send({ status: false, message: err.message });
   }

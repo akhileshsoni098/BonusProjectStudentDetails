@@ -1,0 +1,25 @@
+{
+  "name": "bonusprojectstudentdetails",
+  "version": "1.0.0",
+  "description": "Technology:\r Use any.\r Database:\r MYSQL / MongoDB / (Use any)\r Below are the task requirements.\r Task\r The task is very simple. You just need to think twice and follow the below\r instruction\r 1. Create a login screen.\r 2. After logging in the student list will appear with filters(name, subject) and\r add/edit/view/delete.\r 3. While adding a student with the student and subject combination that\r already exists in the database then include the marks in existing marks.\r otherwise, it will create a new student record.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akhileshsoni098/BonusProjectStudentDetails.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akhileshsoni098/BonusProjectStudentDetails/issues"
+  },
+  "homepage": "https://github.com/akhileshsoni098/BonusProjectStudentDetails#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^6.10.0",
+    "nodemon": "^2.0.20"
+  }
+}
